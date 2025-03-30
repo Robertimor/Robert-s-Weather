@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Шрифт -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet"
+        />
+        <!--  -->
+
+        <!-- Подключение CSS и JS для Leaflet -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+        <!--  -->
+
+        <!-- favicon -->
+        <link rel="icon" type="image/svg+xml" href="/Robert-s-Weather/vite.svg" />
+        <!--  -->
+        <title>Robert's Weather</title>
+      <script type="module" crossorigin src="/Robert-s-Weather/assets/index-C-C9RPIl.js"></script>
+      <link rel="stylesheet" crossorigin href="/Robert-s-Weather/assets/index-BJSXXHFj.css">
+    </head>
+    <body>
+        <div class="content">
+            <section class="control">
+                <div class="container control__container">
+                    <div class="control__control-bar">
+                        <img src="data:image/svg+xml,%3csvg%20width='44'%20height='44'%20viewBox='0%200%2044%2044'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_59_0)'%3e%3cpath%20d='M39%200H5C2.23858%200%200%202.23858%200%205V39C0%2041.7614%202.23858%2044%205%2044H39C41.7614%2044%2044%2041.7614%2044%2039V5C44%202.23858%2041.7614%200%2039%200Z'%20fill='%23B4B8BB'%20fill-opacity='0.4'/%3e%3cpath%20d='M27.2218%2044L7.2218%2024L0%2031.2218V39C0%2041.7614%202.23858%2044%205%2044H27.2218Z'%20fill='%23AEB5B9'%20fill-opacity='0.5'/%3e%3cpath%20d='M34.2218%2014L44%2023.7782V39C44%2041.7614%2041.7614%2044%2039%2044H27.2218L15.7218%2032.5L34.2218%2014Z'%20fill='%23AEB5B9'%20fill-opacity='0.3'/%3e%3cpath%20d='M9%2013C11.2091%2013%2013%2011.2091%2013%209C13%206.79086%2011.2091%205%209%205C6.79086%205%205%206.79086%205%209C5%2011.2091%206.79086%2013%209%2013Z'%20fill='white'%20fill-opacity='0.3'/%3e%3c/g%3e%3cpath%20d='M14.0492%2023.7003C13.9314%2022.6417%2014.0296%2021.6198%2014.2966%2020.6753C15.1841%2017.5362%2017.9684%2015.2278%2021.2711%2015.1871V13.1351C21.2711%2013.0211%2021.4086%2012.96%2021.4989%2013.0292L25.5713%2016.1316C25.638%2016.1845%2025.638%2016.2904%2025.5713%2016.3392L21.5028%2019.4416C21.4086%2019.5108%2021.275%2019.4498%2021.275%2019.3358V17.2879C19.1034%2017.3245%2017.2498%2018.7129%2016.4526%2020.6753C16.1502%2021.4162%2015.997%2022.2346%2016.0402%2023.0936C16.0991%2024.2743%2016.5272%2025.3614%2017.2027%2026.2408C17.5639%2026.709%2017.4775%2027.393%2017.0102%2027.7472C16.5665%2028.0851%2015.946%2027.9915%2015.6043%2027.5436C14.7679%2026.4607%2014.2102%2025.1415%2014.0492%2023.7003ZM25.8069%2019.7592C26.4863%2020.6345%2026.9144%2021.7257%2026.9693%2022.9064C27.0125%2023.7695%2026.8554%2024.5878%2026.557%2025.3247C25.7598%2027.2871%2023.9062%2028.6796%2021.7345%2028.7121V26.6642C21.7345%2026.5502%2021.5971%2026.4892%2021.5067%2026.5584L17.4344%2029.6607C17.3676%2029.7137%2017.3676%2029.8195%2017.4344%2029.8684L21.5028%2032.9708C21.5971%2033.04%2021.7306%2032.9789%2021.7306%2032.8649V30.8129C25.0333%2030.7763%2027.8215%2028.4678%2028.7051%2025.3247C28.9721%2024.3802%2029.0664%2023.3583%2028.9525%2022.2997C28.7954%2020.8585%2028.2378%2019.5393%2027.4013%2018.4564C27.0557%2018.0085%2026.4392%2017.9149%2025.9954%2018.2528C25.532%2018.607%2025.4456%2019.291%2025.8069%2019.7592Z'%20fill='white'/%3e%3cdefs%3e%3cclipPath%20id='clip0_59_0'%3e%3crect%20width='44'%20height='44'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e" alt="refresh-BG" class="control__refresh-BG">
+                        <div class="control__change-language">
+                            <div class="control__current-language">
+                                <span class="control__name-language">EN</span>
+                                <img src="data:image/svg+xml,%3csvg%20width='10'%20height='6'%20viewBox='0%200%2010%206'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M4.84162%203.75747L8.62642%200L9.68323%201.0645L4.84162%205.87114L0%201.0645L1.05681%203.57628e-07L4.84162%203.75747Z'%20fill='white'%20fill-opacity='0.4'/%3e%3c/svg%3e" alt="" class="control__icon-arrow-down-language">   
+                            </div>
+                            <ul class="control__hidden-list-languages hidden-by-display">
+                                <li class="control__hidden-element-language control__hidden-element-language_selected">
+                                    <span class="control__hidden-element-language-name">EN</span> 
+                                    <img src="data:image/svg+xml,%3csvg%20version='1.2'%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201640%20664'%20width='1640'%20height='664'%3e%3ctitle%3eНовый%20проект%3c/title%3e%3cdefs%3e%3cimage%20width='1497'%20height='137'%20id='img1'%20href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABdkAAACJAQMAAADqqaOAAAAAAXNSR0IB2cksfwAAAANQTFRFn5+dKVK7OwAAAJ9JREFUeJztzkENADAIALHh3/RE8GhIrgo677DRgY3ySnmlvFJeKa+UV8or5ZXySnmlvFJeKa+UV8or5ZXySnmlvFJeKa+UV8or5ZXySnmlvFJeKa+UV8or5ZXySnmlvFJeKa+UV8or5ZXySnmlvFJeKa+UV8or5ZXySnmlvFJeKa+UV8or5ZXySnmlvFJeKa+UV8or5ZXySnmlvHI6/wGpswCKSRmqugAAAABJRU5ErkJggg=='/%3e%3c/defs%3e%3cstyle%3e%3c/style%3e%3cuse%20id='Фигура%201'%20href='%23img1'%20x='71'%20y='263'/%3e%3c/svg%3e" class="control__hidden-element-language-icon" alt="" width="10" height="6">
+                                </li>
+                                <li class="control__hidden-element-language">
+                                    <span class="control__hidden-element-language-name">RU</span> 
+                                    <img src="data:image/svg+xml,%3csvg%20version='1.2'%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201640%20664'%20width='1640'%20height='664'%3e%3ctitle%3eНовый%20проект%3c/title%3e%3cdefs%3e%3cimage%20width='1497'%20height='137'%20id='img1'%20href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABdkAAACJAQMAAADqqaOAAAAAAXNSR0IB2cksfwAAAANQTFRFn5+dKVK7OwAAAJ9JREFUeJztzkENADAIALHh3/RE8GhIrgo677DRgY3ySnmlvFJeKa+UV8or5ZXySnmlvFJeKa+UV8or5ZXySnmlvFJeKa+UV8or5ZXySnmlvFJeKa+UV8or5ZXySnmlvFJeKa+UV8or5ZXySnmlvFJeKa+UV8or5ZXySnmlvFJeKa+UV8or5ZXySnmlvFJeKa+UV8or5ZXySnmlvHI6/wGpswCKSRmqugAAAABJRU5ErkJggg=='/%3e%3c/defs%3e%3cstyle%3e%3c/style%3e%3cuse%20id='Фигура%201'%20href='%23img1'%20x='71'%20y='263'/%3e%3c/svg%3e" class="control__hidden-element-language-icon" alt="" width="10" height="6">
+                                </li>
+                                <li class="control__hidden-element-language">
+                                    <span class="control__hidden-element-language-name">ES</span> 
+                                    <img src="data:image/svg+xml,%3csvg%20version='1.2'%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201640%20664'%20width='1640'%20height='664'%3e%3ctitle%3eНовый%20проект%3c/title%3e%3cdefs%3e%3cimage%20width='1497'%20height='137'%20id='img1'%20href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABdkAAACJAQMAAADqqaOAAAAAAXNSR0IB2cksfwAAAANQTFRFn5+dKVK7OwAAAJ9JREFUeJztzkENADAIALHh3/RE8GhIrgo677DRgY3ySnmlvFJeKa+UV8or5ZXySnmlvFJeKa+UV8or5ZXySnmlvFJeKa+UV8or5ZXySnmlvFJeKa+UV8or5ZXySnmlvFJeKa+UV8or5ZXySnmlvFJeKa+UV8or5ZXySnmlvFJeKa+UV8or5ZXySnmlvFJeKa+UV8or5ZXySnmlvHI6/wGpswCKSRmqugAAAABJRU5ErkJggg=='/%3e%3c/defs%3e%3cstyle%3e%3c/style%3e%3cuse%20id='Фигура%201'%20href='%23img1'%20x='71'%20y='263'/%3e%3c/svg%3e" class="control__hidden-element-language-icon" alt="" width="10" height="6">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="control__change-temperature">
+                            <div class="control__type-temperature control__faringate">°F</div>
+                            <div class="control__type-temperature control__celsius control__type-temperature_selected-type">°С</div>
+                        </div>
+                    </div>
+                    <form action="" class="control__serch-bar" method="POST" name="search-city-form" id="search-city-form">
+                        <div class="control__search-city-input-container">
+                            <input type="text" id="search-city-input" placeholder="Search city or ZIP" class="control__search-city-input">
+                            <img src="data:image/svg+xml,%3csvg%20width='16'%20height='18'%20viewBox='0%200%2016%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M7.86774%2011.003C7.00412%2011.003%206.26271%2010.7403%205.64351%2010.2149C5.02431%209.68954%204.71472%209.06737%204.71472%208.34841V3.03921C4.71472%202.29261%205.02431%201.66352%205.64351%201.15196C6.26271%200.640395%207.00412%200.384613%207.86774%200.384613C8.73135%200.384613%209.46462%200.640395%2010.0675%201.15196C10.6704%201.66352%2010.9719%202.29261%2010.9719%203.03921V8.34841C10.9719%209.06737%2010.6704%209.68954%2010.0675%2010.2149C9.46462%2010.7403%208.73135%2011.003%207.86774%2011.003ZM13.3672%208.34841H15.1759C15.1759%209.84163%2014.5649%2011.1482%2013.3428%2012.2681C12.1207%2013.388%2010.646%2014.0586%208.91874%2014.2798V17.1833H6.81673V14.2798C5.08949%2014.0586%203.61482%2013.3811%202.39272%2012.2474C1.17062%2011.1136%200.55957%209.81398%200.55957%208.34841H2.3194C2.3194%209.62041%202.87342%2010.685%203.98145%2011.5422C5.08949%2012.3994%206.38492%2012.8281%207.86774%2012.8281C9.35055%2012.8281%2010.6378%2012.3994%2011.7296%2011.5422C12.8213%2010.685%2013.3672%209.62041%2013.3672%208.34841Z'%20fill='white'%20fill-opacity='0.4'/%3e%3c/svg%3e" alt="" class="control__search-city-icon">
+                        </div>
+                        <button type="submit" class="control__search-city-button">Search</button>
+                    </form>
+                </div>
+            </section>
+            <section class="today-weather">
+                <div class="container today-weather__container">
+                    <div class="today-weather__header">
+                        <h1 class="today-weather__city-country"><span class="today-weather__city"></span>, <span class="today-weather__country"></span></h1>
+                        <h2 class="today-weather__today-date-time">
+                            <span class="today-weather__today-date"></span>
+                            <span class="today-weather__today-time"></span>
+                        </h2>
+                    </div>
+                    <div class="today-weather__data-weather">
+                        <p class="today-weather__temperature-today">
+                            <span class="today-weather__num-temperature-today"></span>
+                            <span class="today-weather__degree-temperature-today">°</span>
+                        </p>
+                        <img src="data:image/svg+xml,%3csvg%20width='164'%20height='104'%20viewBox='0%200%20164%20104'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M54.0588%201.83557C69.7754%20-1.60747%2087.4481%205.72769%2095.8797%2021.2962C106.133%2013.8113%20120.972%2015.0838%20129.741%2025.0386C133.316%2029.0056%20135.677%2034.3199%20136.217%2040.0083C146.065%2041.3556%20155.508%2047.7926%20160.297%2057.6726C164.345%2065.906%20164.547%2076.3848%20160.635%2084.7678C155.238%2096.519%20143.502%20103.63%20131.765%20103.63H32.6087C21.1417%20103.63%209.3374%2096.7436%203.94115%2085.2169C-0.106034%2076.9835%20-0.106034%2066.5047%203.94115%2058.1217C7.78597%2049.589%2015.4082%2043.4514%2023.5025%2040.9065C23.5025%2034.3199%2024.8516%2027.7332%2027.8195%2022.0447C33.2158%2011.3413%2043.3337%204.08103%2053.9913%201.83557H54.0588ZM110.315%2052.9572C105.863%2054.6038%20102.558%2059.3941%20102.49%2064.7084C98.7127%2066.2054%2095.2726%2069.7232%2095.2726%2074.4387C95.0703%2080.4266%20100.264%2084.9175%20105.391%2084.9175H137.094C139.454%2084.9175%20141.815%2084.3187%20143.839%2082.672C147.211%2080.4266%20148.83%2075.4866%20147.346%2071.4447C146.132%2067.4778%20142.625%2065.2323%20139.252%2064.409C138.577%2062.3881%20137.903%2060.2175%20136.217%2058.945C133.316%2056.4002%20129.202%2056.4002%20126.099%2058.3462C122.726%2052.8075%20115.981%2050.4871%20110.315%2052.8823V52.9572Z'%20fill='%23E4E3E3'%20stroke='%23E4E3E3'%20stroke-width='0.1'/%3e%3cpath%20d='M109.715%2053.3088C115.479%2050.8137%20122.425%2053.1576%20125.897%2058.7527C129.162%2056.7868%20133.398%2056.7868%20136.315%2059.3576C138.121%2060.6429%20138.816%2062.8356%20139.51%2064.8771C142.983%2065.6332%20146.594%2067.9015%20147.845%2071.9088C149.373%2075.9917%20147.636%2080.9819%20144.233%2083.2502C142.149%2084.9136%20139.719%2085.5185%20137.288%2085.5185H104.645C99.3662%2085.5185%2094.0182%2080.9819%2094.2266%2074.9331C94.2266%2070.1697%2097.6993%2066.6161%20101.728%2065.1039C101.728%2059.8112%20105.2%2054.8966%20109.715%2053.1576V53.3088Z'%20fill='%23ACA6A6'%20stroke='%23ACA6A6'%20stroke-width='0.1'/%3e%3c/svg%3e" alt="" class="today-weather__weather-icon" width="200">
+                        <div class="today-weather__weather-details">
+                            <div class="today-weather__weather-condition"></div>
+                            <div class="today-weather__perceived-temperature">Feels like: <span class="today-weather__perceived-temperature-num"></span>°</div>
+                            <div class="today-weather__wind-speed">Wind: <span class="today-weather__wind-speed-num"></span> m/s </div>
+                            <div class="today-weather__humidity">Humidity: <span class="today-weather__humidity-num"></span>%</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="weather-three-days">
+                <div class="container weather-three-days__container">
+                    <div class="day weather-three-days__day">
+                        <h3 class="day__day-week"></h3>
+                        <p class="day__temperature">
+                            <span class="day__num-temperature"></span>
+                            <span class="day__degree-temperature">°</span>
+                        </p>
+                        <div class="day__weather-icon-container">
+                            <img src="data:image/svg+xml,%3csvg%20width='68'%20height='46'%20viewBox='0%200%2068%2046'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M7.75417%203.21371C12.6163%20-0.0118243%2019.1174%200.319773%2023.7063%203.99749C19.3359%204.90185%2015.2932%207.82593%2013.0533%2012.1367C11.8788%2014.4277%2011.3325%2017.0805%2011.3598%2019.7333C8.02732%2020.7582%204.968%2023.2301%203.38371%2026.6667C0.925323%2023.0493%200.0239161%2018.2863%200.843377%2013.8851C1.66284%209.45377%204.2578%205.44446%207.78148%203.21371H7.75417Z'%20fill='%23FF8841'%20stroke='%23FF8841'%20stroke-width='0.1'/%3e%3cpath%20d='M23.2894%203.78279C29.6532%202.38867%2036.809%205.35874%2040.223%2011.6625C44.3745%208.63187%2050.3832%209.14709%2053.9338%2013.1779C55.3814%2014.7841%2056.3373%2016.9359%2056.5558%2019.2392C60.5434%2019.7848%2064.3671%2022.3911%2066.3063%2026.3916C67.945%2029.7254%2068.0269%2033.9683%2066.4428%2037.3627C64.2578%2042.1209%2059.5055%2045%2054.7532%2045H14.6041C9.96102%2045%205.18137%2042.2118%202.99639%2037.5445C1.35765%2034.2108%201.35765%2029.9678%202.99639%2026.5735C4.55319%2023.1185%207.63948%2020.6334%2010.917%2019.6029C10.917%2016.9359%2011.4632%2014.2689%2012.6649%2011.9656C14.8499%207.63175%2018.9468%204.69199%2023.2621%203.78279H23.2894ZM46.0679%2024.4823C44.2653%2025.1491%2042.927%2027.0887%2042.8996%2029.2405C41.3702%2029.8466%2039.9772%2031.271%2039.9772%2033.1804C39.8953%2035.6049%2041.9983%2037.4233%2044.0741%2037.4233H56.9108C57.8668%2037.4233%2058.8227%2037.1809%2059.6421%2036.5141C61.0077%2035.6049%2061.6632%2033.6047%2061.0623%2031.9681C60.5707%2030.3618%2059.1505%2029.4526%2057.7848%2029.1192C57.5117%2028.301%2057.2386%2027.4221%2056.5558%2026.9069C55.3814%2025.8764%2053.7153%2025.8764%2052.4589%2026.6644C51.0933%2024.4217%2048.3621%2023.4822%2046.0679%2024.452V24.4823Z'%20fill='%23E4E3E3'%20stroke='%23E4E3E3'%20stroke-width='0.1'/%3e%3cpath%20d='M45.8249%2024.6247C48.1591%2023.6144%2050.9713%2024.5635%2052.3774%2026.829C53.6992%2026.033%2055.4146%2026.033%2056.5957%2027.0739C57.3269%2027.5944%2057.6081%2028.4822%2057.8894%2029.3088C59.2955%2029.6149%2060.7578%2030.5334%2061.264%2032.156C61.8827%2033.8092%2061.1797%2035.8298%2059.8017%2036.7482C58.958%2037.4218%2057.9737%2037.6667%2056.9895%2037.6667H43.772C41.6347%2037.6667%2039.4693%2035.8298%2039.5537%2033.3806C39.5537%2031.4518%2040.9598%2030.0129%2042.5909%2029.4006C42.5909%2027.2576%2043.997%2025.2676%2045.8249%2024.5635V24.6247Z'%20fill='%23ACA6A6'%20stroke='%23ACA6A6'%20stroke-width='0.1'/%3e%3c/svg%3e" alt="погода" class="day__weather-icon">
+                        </div>
+                    </div>
+                    <div class="day weather-three-days__day">
+                        <h3 class="day__day-week"></h3>
+                        <p class="day__temperature">
+                            <span class="day__num-temperature"></span>
+                            <span class="day__degree-temperature">°</span>
+                        </p>
+                        <div class="day__weather-icon-container">
+                            <img src="data:image/svg+xml,%3csvg%20width='67'%20height='43'%20viewBox='0%200%2067%2043'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M22.4833%200.782786C28.847%20-0.611326%2036.0028%202.35874%2039.4169%208.66255C43.5684%205.63187%2049.5771%206.14709%2053.1277%2010.1779C54.5752%2011.7841%2055.5311%2013.9359%2055.7496%2016.2392C59.7372%2016.7848%2063.5609%2019.3911%2065.5001%2023.3916C67.1389%2026.7254%2067.2208%2030.9683%2065.6367%2034.3627C63.4517%2039.1209%2058.6994%2042%2053.947%2042H13.798C9.15487%2042%204.37522%2039.2118%202.19023%2034.5445C0.551497%2031.2108%200.551497%2026.9678%202.19023%2023.5735C3.74704%2020.1185%206.83332%2017.6334%2010.1108%2016.6029C10.1108%2013.9359%2010.657%2011.2689%2011.8588%208.96562C14.0438%204.63175%2018.1406%201.69199%2022.456%200.782786H22.4833ZM45.2617%2021.4823C43.4591%2022.1491%2042.1208%2024.0887%2042.0935%2026.2405C40.564%2026.8466%2039.1711%2028.271%2039.1711%2030.1804C39.0891%2032.6049%2041.1922%2034.4233%2043.2679%2034.4233H56.1047C57.0606%2034.4233%2058.0165%2034.1809%2058.8359%2033.5141C60.2015%2032.6049%2060.857%2030.6047%2060.2562%2028.9681C59.7645%2027.3618%2058.3443%2026.4526%2056.9787%2026.1192C56.7056%2025.301%2056.4324%2024.4221%2055.7496%2023.9069C54.5752%2022.8764%2052.9092%2022.8764%2051.6528%2023.6644C50.2872%2021.4217%2047.5559%2020.4822%2045.2617%2021.452V21.4823Z'%20fill='%23E4E3E3'%20stroke='%23E4E3E3'%20stroke-width='0.1'/%3e%3cpath%20d='M45.0188%2021.6247C47.3529%2020.6144%2050.1651%2021.5635%2051.5712%2023.829C52.893%2023.033%2054.6085%2023.033%2055.7896%2024.0739C56.5208%2024.5944%2056.802%2025.4822%2057.0832%2026.3088C58.4893%2026.6149%2059.9517%2027.5334%2060.4579%2029.156C61.0766%2030.8092%2060.3735%2032.8298%2058.9955%2033.7482C58.1519%2034.4218%2057.1676%2034.6667%2056.1833%2034.6667H42.9658C40.8286%2034.6667%2038.6631%2032.8298%2038.7475%2030.3806C38.7475%2028.4518%2040.1536%2027.0129%2041.7847%2026.4006C41.7847%2024.2576%2043.1908%2022.2676%2045.0188%2021.5635V21.6247Z'%20fill='%23ACA6A6'%20stroke='%23ACA6A6'%20stroke-width='0.1'/%3e%3c/svg%3e" alt="погода" class="day__weather-icon">
+                        </div>
+                    </div>
+                    <div class="day weather-three-days__day">
+                        <h3 class="day__day-week"></h3>
+                        <p class="day__temperature">
+                            <span class="day__num-temperature"></span>
+                            <span class="day__degree-temperature">°</span>
+                        </p>
+                        <div class="day__weather-icon-container">
+                            <img src="data:image/svg+xml,%3csvg%20width='67'%20height='43'%20viewBox='0%200%2067%2043'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M22.4833%200.782786C28.847%20-0.611326%2036.0028%202.35874%2039.4169%208.66255C43.5684%205.63187%2049.5771%206.14709%2053.1277%2010.1779C54.5752%2011.7841%2055.5311%2013.9359%2055.7496%2016.2392C59.7372%2016.7848%2063.5609%2019.3911%2065.5001%2023.3916C67.1389%2026.7254%2067.2208%2030.9683%2065.6367%2034.3627C63.4517%2039.1209%2058.6994%2042%2053.947%2042H13.798C9.15487%2042%204.37522%2039.2118%202.19023%2034.5445C0.551497%2031.2108%200.551497%2026.9678%202.19023%2023.5735C3.74704%2020.1185%206.83332%2017.6334%2010.1108%2016.6029C10.1108%2013.9359%2010.657%2011.2689%2011.8588%208.96562C14.0438%204.63175%2018.1406%201.69199%2022.456%200.782786H22.4833ZM45.2617%2021.4823C43.4591%2022.1491%2042.1208%2024.0887%2042.0935%2026.2405C40.564%2026.8466%2039.1711%2028.271%2039.1711%2030.1804C39.0891%2032.6049%2041.1922%2034.4233%2043.2679%2034.4233H56.1047C57.0606%2034.4233%2058.0165%2034.1809%2058.8359%2033.5141C60.2015%2032.6049%2060.857%2030.6047%2060.2562%2028.9681C59.7645%2027.3618%2058.3443%2026.4526%2056.9787%2026.1192C56.7056%2025.301%2056.4324%2024.4221%2055.7496%2023.9069C54.5752%2022.8764%2052.9092%2022.8764%2051.6528%2023.6644C50.2872%2021.4217%2047.5559%2020.4822%2045.2617%2021.452V21.4823Z'%20fill='%23E4E3E3'%20stroke='%23E4E3E3'%20stroke-width='0.1'/%3e%3cpath%20d='M45.0188%2021.6247C47.3529%2020.6144%2050.1651%2021.5635%2051.5712%2023.829C52.893%2023.033%2054.6085%2023.033%2055.7896%2024.0739C56.5208%2024.5944%2056.802%2025.4822%2057.0832%2026.3088C58.4893%2026.6149%2059.9517%2027.5334%2060.4579%2029.156C61.0766%2030.8092%2060.3735%2032.8298%2058.9955%2033.7482C58.1519%2034.4218%2057.1676%2034.6667%2056.1833%2034.6667H42.9658C40.8286%2034.6667%2038.6631%2032.8298%2038.7475%2030.3806C38.7475%2028.4518%2040.1536%2027.0129%2041.7847%2026.4006C41.7847%2024.2576%2043.1908%2022.2676%2045.0188%2021.5635V21.6247Z'%20fill='%23ACA6A6'%20stroke='%23ACA6A6'%20stroke-width='0.1'/%3e%3c/svg%3e" alt="погода" class="day__weather-icon">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="map">
+                <div class="container map__container">
+                    <div id="map" class="map__mapEl"></div>
+                    <div class="map__geolocation">
+                        <p class="map__latitude"><span class="map__latitude-name">Latitude</span>: <span class="map__latitude-num"></span></p>
+                        <p class="map__longitude"><span class="map__longitude-name">Longitude</span>: <span class="map__longitude-num"></span></p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+        <!-- <script type="module" src="/src/js/ChangeDisplay.js"></script> -->
+        <!-- <script type="module" src="/src/js/reload.js"></script> -->
+        <!-- <script type="module" src="/src/js/search.js"></script> -->
+        <!-- <script type="module" src="/src/js/script.js"></script> -->
+    </body>
+</html>
