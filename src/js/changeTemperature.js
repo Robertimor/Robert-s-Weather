@@ -3,24 +3,24 @@
 import {
     controlDomElements,
     todayWeatherDomElements,
-    threeDaysArr,
+    upcomingForecastDays,
 } from './dom.js';
-import { convertUnitTemp } from './weatherController.js';
+import { convertUnitTemp } from './utils.js';
+import { setToLocalStorage, getFromLocalStorage } from './localStorage.js';
 
 // Проставляет активный класс выбранной шкале температуры
-function setActiveTemperatureType(curTypeTempName) {
+function setActiveTemperatureType(currentTypeTemperatureName) {
     controlDomElements.typesTemperature.forEach(function (el) {
         el.classList.remove('control__type-temperature_selected-type');
     });
-
     const selected = controlDomElements.changeTemperature.querySelector(
-        `.control__${curTypeTempName}`
+        `.control__${currentTypeTemperatureName}`
     );
     selected?.classList.add('control__type-temperature_selected-type');
 }
 
 // Сразу при запуске страницы обновляю стиль выбранного элемента на шкале температуры
-setActiveTemperatureType(window.localStorage.getItem('curTypeTempName'));
+setActiveTemperatureType(getFromLocalStorage('currentTypeTemperatureName'));
 
 // При смене шкалы температуры
 controlDomElements.changeTemperature.addEventListener('click', function (e) {
@@ -34,32 +34,29 @@ controlDomElements.changeTemperature.addEventListener('click', function (e) {
 
     // Определения названия выбранной шкалы (которое нужно будет передать в функцию для api)
     const isFahrenheit = button.classList.contains('control__faringate');
-    const curTypeTemp = isFahrenheit ? 'imperial' : 'metric';
-    const curTypeTempName = isFahrenheit ? 'faringate' : 'celsius';
+    const currentTypeTemperature = isFahrenheit ? 'imperial' : 'metric';
+    const currentTypeTemperatureName = isFahrenheit ? 'faringate' : 'celsius';
 
     // Обновляю html стиль выбранной температуры, данные в localstorage и саму вписанную температуру (перевожу в нужную шкалу)
-    setActiveTemperatureType(curTypeTempName);
+    setActiveTemperatureType(currentTypeTemperatureName);
 
-    window.localStorage.setItem('curTypeTemp', curTypeTemp);
-    window.localStorage.setItem('curTypeTempName', curTypeTempName);
+    setToLocalStorage('currentTypeTemperature', currentTypeTemperature);
+    setToLocalStorage('currentTypeTemperatureName', currentTypeTemperatureName);
 
     convertDisplayTemp();
 });
 
-window.localStorage.setItem('curTypeTemp', 'metric');
-window.localStorage.setItem('curTypeTempName', 'celsius');
-
 // Функция для смены показа температуры на странице
 function convertDisplayTemp() {
     todayWeatherDomElements.numTemperatureToday.innerText = convertUnitTemp(
-        window.localStorage.getItem('tempTodayC')
+        getFromLocalStorage('tempTodayC')
     );
     todayWeatherDomElements.perceivedTemperatureNum.innerText = convertUnitTemp(
-        window.localStorage.getItem('tempfeelsLikeC')
+        getFromLocalStorage('tempfeelsLikeC')
     );
 
-    const arrDays = JSON.parse(window.localStorage.getItem('tempOtherDays'));
-    threeDaysArr.forEach(function (day) {
+    const arrDays = getFromLocalStorage('tempOtherDays');
+    upcomingForecastDays.forEach(function (day) {
         day.querySelector('.day__num-temperature').innerText = convertUnitTemp(
             arrDays.shift()
         );

@@ -1,0 +1,105 @@
+.upcoming-forecast {
+    color: #fff;
+    grid-column: 1;
+
+    display: flex;
+    gap: 3.1875rem; /* 51px */
+}
+
+.day {
+    display: grid;
+    grid-template-columns: min-content min-content;
+    grid-template-rows: 1.6875rem 1fr; /* 27px 1fr*/
+    row-gap: 0.8125rem; /* 13px */
+}
+
+.day__day-week {
+    grid-column: 1 / 3;
+}
+.day__day-week {
+    font-size: 1.375rem; /* 22px */
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+
+.day__temperature {
+    display: flex;
+    font-size: 5rem; /* 80px */
+}
+.day__num-temperature {
+    font-size: 5rem; /* 80px */
+}
+
+.day__num-temperature::after {
+    content: "°";
+}
+
+.day__weather-icon-container {
+    position: relative;
+    transform: translate(-5px, -30px);
+    width: 5.625rem; /* 90px */
+    height: 5.625rem; /* 90px */
+}
+.day__weather-icon {
+    max-width: unset;
+    width: inherit;
+}
+
+@media (max-width: 1280px) {
+    .day__temperature, .day__num-temperature {
+        font-size: 4.375rem; /* 70px */
+    }
+}
+
+@media (max-width: 1080px) {
+    .upcoming-forecast {
+        grid-column: 1/3;
+        grid-row: 3;
+        align-items: center;
+        align-self: center;
+        margin: 0 auto;
+
+        flex-wrap: wrap;
+        row-gap: 0.9375rem; /* 15px */
+        column-gap: 1.5625rem; /* 25px */
+        justify-content:space-around;
+    }
+    .day {
+        row-gap: 1.3125rem; /* 21px */
+    }
+    .day__day-week {
+        font-size: 1.975rem;    /* 31.6px */
+    }
+    .day__num-temperature, .day__num-temperature::after {
+        font-size: 4rem; /* 64px */
+    }
+    .day__weather-icon {
+        right: 0;
+        top: -14px;
+    }
+}
+
+
+@media (max-width: 630px) {
+    .upcoming-forecast {
+        grid-column: 1 / 3;
+        grid-row: 3;
+    }
+}
+
+
+@media (min-width: 1900px) {
+    .day__day-week {
+        font-size: 1.875rem; /* 30px */
+    }
+    .day__temperature, .day__num-temperature {
+        font-size: 5.375rem; /* 86px */
+    }
+    .day__weather-icon-container {
+        width: 4.375rem; /* 70px */
+    }
+    .day__weather-icon {
+        width: 6.25rem; /* 100px */
+    }
+}

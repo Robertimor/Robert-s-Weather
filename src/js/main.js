@@ -1,8 +1,11 @@
 'use strict';
 import './weatherController.js';
-import './changeTemp.js';
+import './changeTemperature.js';
 import './changeBG.js';
-import './jobAPI.js';
-import './voiceSearch.js'
+import './getAPI_Key.js';
+import './voiceSearch.js';
 // import './changeLanguage.js'
+import './errors.js';
+import './map.js';
+import './localStorage.js';
 import './dom.js';

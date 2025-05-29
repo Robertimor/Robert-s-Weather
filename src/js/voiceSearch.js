@@ -1,10 +1,7 @@
 'use strict';
 
-import {
-    controlDomElements,
-} from './dom.js';
-
-
+import { controlDomElements } from './dom.js';
+import { getFromLocalStorage } from './localStorage.js';
 
 // Проверяем поддержку браузером Web Speech API
 const speechRecognition =
@@ -19,9 +16,9 @@ if (speechRecognition) {
     // При нажатии на кнопку микрофона запускаем распознавание речи
     controlDomElements.searchCityIcon.addEventListener('click', () => {
         // Устанавливаем язык для распознавания речи
-        recognition.lang = `${window.localStorage.getItem('language').toLowerCase()}-${window.localStorage.getItem('language')}`;
+        recognition.lang = `${getFromLocalStorage('language').toLowerCase()}-${getFromLocalStorage('language')}`;
         console.log(
-            `${window.localStorage.getItem('language').toLowerCase()}-${window.localStorage.getItem('language')}`
+            `${getFromLocalStorage('language').toLowerCase()}-${getFromLocalStorage('language')}`
         );
         recognition.start();
         controlDomElements.searchCityInput.value = '🎙️ Говорите...';
