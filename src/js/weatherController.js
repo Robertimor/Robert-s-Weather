@@ -21,7 +21,7 @@ function initDefaultLocalStorage() {
         setToLocalStorage('currentTypeTemperature', 'metric'); // шкала Цельсия
     }
     if (!getFromLocalStorage('currentTypeTemperatureName')) {
-        setToLocalStorage('currentTypeTemperatureName', '°C');
+        setToLocalStorage('currentTypeTemperatureName', 'celsius');
     }
 
     // Устанавливаем язык по умолчанию, если её нет в localStorage
